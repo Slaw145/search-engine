@@ -1,0 +1,65 @@
+<img src="enbio.jpg" alt="" style="width:25%; float:right; padding-top: 0.7%; padding-right: 3%;" class=" img-rounded">
+
+
+<br><br>
+
+
+<a href="#/sqlite" style="padding-left: 1%;">Przejdź do sqlite</a>
+<br><br>
+<a href="#/baza" style="padding-left: 1%;">Wyświetl całą bazę danych sql</a>
+<br><br>
+<div class="content">
+
+<div class="col-lg-3 col-sm-3 col-sm-3 col-xs-3">
+	
+	<input type="text" class="form-control" placeholder="Podaj plik.." ng-model="search">
+	<br>
+	<div class="panel" ng-repeat="product in products | filter : search">
+		<a download="process.dat" href="../wszystkiedane/{{product.maszyna}}/{{product.daty}}/{{product.pliki}}" target="_blank">{{product.pliki}}</a>
+	</div>
+	
+</div>
+		<div class="col-lg-9 col-sm-9 col-sm-9 col-xs-9">
+			<form ng-submit="formSubmit( liczdate )">
+				  <div class="row">
+					<div class="col-sm-12">
+						<h4>Przykładowy format: 2017-08-22</h4>
+							<input type="text" class="form-control" ng-model="liczdate.wyniki" placeholder="Podaj maszynę">
+							<br>
+							<input type="text" class="form-control" ng-model="liczdate.daty1" placeholder="Podaj datę od..">
+							<br>
+							<input type="text" class="form-control" ng-model="liczdate.daty2" placeholder="Podaj datę do..">
+							<br>
+							<button class="btn btn-primary" style="margin-left:45%;">Wyświetl wyniki</button>
+							<br>
+					</div>
+				  </div>
+			</form>
+			<br><br>
+			<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+			<strong>Maszyna</strong>
+			</div>
+			<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+			<strong>Data</strong>
+			</div>
+			<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+			<strong>Pliki</strong>
+			</div>
+			<br><br>
+			<div class="panel" style="width:100%;" ng-repeat="liczdaty in liczdatywszys">
+					<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+						{{liczdaty.maszyna}}
+					</div>
+					<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+						{{liczdaty.daty}}
+					</div>
+					<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+						<a download="process.dat" href="../wszystkiedane/{{liczdaty.maszyna}}/{{liczdaty.daty}}/{{liczdaty.pliki}}" target="_blank">{{liczdaty.pliki}}</a>
+					</div>
+			</div>
+		</div>
+</div>
+
+
+
+

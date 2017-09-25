@@ -1,0 +1,1363 @@
+\document
+[
+  Info
+  {
+    Title = "Enbio"
+  }
+]
+{
+  \styles
+  {
+    Normal
+    {
+      Font
+      {
+        Name = "Calibri"
+        Color = RGB(112,111,111)
+      }
+    }
+
+    Heading1
+    {
+      Font
+      {
+        Name = "Tahoma"
+        Size = 14
+        Bold = true
+        Color = DarkBlue
+      }
+      ParagraphFormat
+      {
+        SpaceAfter = 6
+        PageBreakBefore = true
+        OutlineLevel = Level1
+      }
+    }
+
+    Heading2
+    {
+      Font
+      {
+        Size = 12
+      }
+      ParagraphFormat
+      {
+        SpaceBefore = 6
+        PageBreakBefore = false
+        OutlineLevel = Level2
+      }
+    }
+
+    Heading3
+    {
+      Font
+      {
+        Size = 10
+        Italic = true
+      }
+      ParagraphFormat
+      {
+        SpaceAfter = 3
+        OutlineLevel = Level3
+      }
+    }
+
+    Heading4
+    {
+      ParagraphFormat
+      {
+        OutlineLevel = Level4
+      }
+    }
+
+    Heading5
+    {
+      ParagraphFormat
+      {
+        OutlineLevel = Level5
+      }
+    }
+
+    Heading6
+    {
+      ParagraphFormat
+      {
+        OutlineLevel = Level6
+      }
+    }
+
+    Heading7
+    {
+      ParagraphFormat
+      {
+        OutlineLevel = Level7
+      }
+    }
+
+    Heading8
+    {
+      ParagraphFormat
+      {
+        OutlineLevel = Level8
+      }
+    }
+
+    Heading9
+    {
+      ParagraphFormat
+      {
+        OutlineLevel = Level9
+      }
+    }
+
+    Header
+    {
+      ParagraphFormat
+      {
+        TabStops +=
+        {
+          Position = "16cm"
+          Alignment = Right
+        }
+      }
+    }
+
+    Footer
+    {
+      ParagraphFormat
+      {
+        TabStops +=
+        {
+          Position = "8cm"
+          Alignment = Center
+        }
+      }
+    }
+
+    InvalidStyleName
+    {
+      Font
+      {
+        Bold = true
+        Underline = Dash
+        Color = Lime
+      }
+    }
+
+    TextBox : Normal
+    {
+      ParagraphFormat
+      {
+        Alignment = Justify
+        Borders
+        {
+          Width = 2.5
+          DistanceFromTop = 3
+          DistanceFromBottom = 3
+          DistanceFromLeft = 3
+          DistanceFromRight = 3
+        }
+        Shading
+        {
+          Color = SkyBlue
+        }
+      }
+    }
+
+    TOC : Normal
+    {
+      Font
+      {
+        Color = Blue
+      }
+      ParagraphFormat
+      {
+        TabStops +=
+        {
+          Position = "16cm"
+          Alignment = Right
+          Leader = Dots
+        }
+      }
+    }
+
+    TableHead1 : Normal
+    {
+      Font
+      {
+        Color = RGB(18,138,203)
+      }
+      ParagraphFormat
+      {
+        Alignment = Center
+      }
+    }
+
+    TableData1 : Normal
+    {
+      Font
+      {
+        Size = 12
+        Bold = true
+        Color = RGB(18,138,203)
+      }
+      ParagraphFormat
+      {
+        Alignment = Center
+      }
+    }
+  }
+  \section
+  [
+    PageSetup
+    {
+      TopMargin = "1.5cm"
+      BottomMargin = "0.5cm"
+    }
+  ]
+  {
+    \image("C:\\ProgramData\\Enbio\\steamjet.png")
+    [
+      RelativeHorizontal = Margin
+      Left = Left
+      WrapFormat
+      {
+        Style = Through
+      }
+      LockAspectRatio = true
+    ]
+    \image("C:\\ProgramData\\Enbio\\logo.jpg")
+    [
+      Left = Right
+    ]
+    \table
+    [
+      TopPadding = "0.3cm"
+      BottomPadding = "0.3cm"
+    ]
+    {
+      \columns
+      {
+        \column
+        [
+          Width = "3.5cm"
+        ]
+        \column
+        [
+          Width = "12cm"
+        ]
+      }
+      \rows
+      {
+        \row
+        {
+        }
+        \row
+        {
+          \cell
+          [
+            VerticalAlignment = Center
+          ]
+          \cell
+          {
+            \table
+            [
+              TopPadding = 3
+              LeftPadding = 3
+              RightPadding = 3
+              BottomPadding = 3
+              Borders
+              {
+                Width = 1
+                Color = White
+                DistanceFromBottom = 0
+              }
+            ]
+            {
+              \columns
+              {
+                \column
+                [
+                  Width = "3.3cm"
+                ]
+                \column
+                [
+                  Width = "2.6cm"
+                ]
+                \column
+                [
+                  Width = "2.6cm"
+                ]
+                \column
+                [
+                  Width = "3.1cm"
+                ]
+              }
+              \rows
+              {
+                \row
+                [
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    \paragraph
+                    [
+                      Style = "TableHead1"
+                    ]
+                    {
+                      Data
+                    }
+                    \paragraph
+                    [
+                      Style = "TableData1"
+                    ]
+                    {
+                      27-03-17
+                    }
+                  }
+                  \cell
+                  {
+                    \paragraph
+                    [
+                      Style = "TableHead1"
+                      Format
+                      {
+                        Alignment = Left
+                      }
+                    ]
+                    {
+                      Start
+                    }
+                    \paragraph
+                    [
+                      Style = "TableData1"
+                      Format
+                      {
+                        Alignment = Left
+                      }
+                    ]
+                    {
+                      09:18:13
+                    }
+                  }
+                  \cell
+                  {
+                    \paragraph
+                    [
+                      Style = "TableHead1"
+                      Format
+                      {
+                        Alignment = Right
+                      }
+                    ]
+                    {
+                      Stop
+                    }
+                    \paragraph
+                    [
+                      Style = "TableData1"
+                      Format
+                      {
+                        Font
+                        {
+                          Bold = true
+                        }
+                        Alignment = Right
+                      }
+                    ]
+                    {
+                      09:21:15
+                    }
+                  }
+                  \cell
+                  {
+                    \paragraph
+                    [
+                      Style = "TableHead1"
+                    ]
+                    {
+                      S/N
+                    }
+                    \paragraph
+                    [
+                      Style = "TableData1"
+                    ]
+                    {
+                      \bold{2017-0023}
+                    }
+                  }
+                }
+              }
+            }
+            \table
+            [
+              TopPadding = 3
+              LeftPadding = 3
+              RightPadding = 3
+              BottomPadding = 3
+              Borders
+              {
+                Width = 1
+                Color = White
+              }
+            ]
+            {
+              \columns
+              {
+                \column
+                [
+                  Width = "3.3cm"
+                ]
+                \column
+                [
+                  Width = "4.3cm"
+                ]
+                \column
+                [
+                  Width = "4cm"
+                ]
+              }
+              \rows
+              {
+                \row
+                [
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    \paragraph
+                    [
+                      Style = "TableHead1"
+                    ]
+                    {
+                      Program
+                    }
+                    \paragraph
+                    [
+                      Style = "TableData1"
+                    ]
+                    {
+                      121
+                    }
+                  }
+                  \cell
+                  {
+                    \paragraph
+                    [
+                      Style = "TableHead1"
+                    ]
+                    {
+                      Numer procesu
+                    }
+                    \paragraph
+                    [
+                      Style = "TableData1"
+                    ]
+                    {
+                       00004
+                    }
+                  }
+                  \cell
+                  {
+                    \paragraph
+                    [
+                      Style = "TableHead1"
+                    ]
+                    {
+                      Firmware
+                    }
+                    \paragraph
+                    [
+                      Style = "TableData1"
+                    ]
+                    {
+                       16.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    \image("C:\\ProgramData\\Enbio\\chart.bmp")
+    [
+      Height = "10cm"
+      Left = Left
+    ]
+    \table
+    {
+      \columns
+      {
+        \column
+        [
+          Width = "11.3cm"
+        ]
+        \column
+        [
+          Width = "5cm"
+        ]
+      }
+      \rows
+      {
+        \row
+        {
+        }
+        \row
+        [
+          VerticalAlignment = Top
+        ]
+        {
+          \cell
+          {
+            \table
+            [
+              Borders
+              {
+                Width = 0
+              }
+            ]
+            {
+              \columns
+              {
+                \column
+                [
+                  Format
+                  {
+                    Alignment = Center
+                  }
+                  Width = "0.8cm"
+                ]
+                \column
+                [
+                  Width = "2.8cm"
+                ]
+                \column
+                [
+                  Width = "1.5cm"
+                ]
+                \column
+                [
+                  Width = "1.5cm"
+                ]
+                \column
+                [
+                  Width = "1.5cm"
+                ]
+                \column
+                [
+                  Width = "1.5cm"
+                ]
+                \column
+                [
+                  Width = "1.5cm"
+                ]
+              }
+              \rows
+              {
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Bold = true
+                      Color = RGB(18,138,203)
+                    }
+                  }
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  \cell
+                  {
+                    Stage
+                  }
+                  \cell
+                  {
+                    Time [s]
+                  }
+                  \cell
+                  {
+                    Step [s]
+                  }
+                  \cell
+                  {
+                    p [bar]
+                  }
+                  \cell
+                  {
+                    t [°C]
+                  }
+                  \cell
+                  {
+                    t teor. [°C]
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    0
+                  }
+                  \cell
+                  {
+                    Locking door
+                  }
+                  \cell
+                  {
+                    00:00
+                  }
+                  \cell
+                  \cell
+                  {
+                    -0.00
+                  }
+                  \cell
+                  {
+                    112.4
+                  }
+                  \cell
+                  {
+                    112.4
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    1
+                  }
+                  \cell
+                  {
+                    Heating up
+                  }
+                  \cell
+                  {
+                    00:01
+                  }
+                  \cell
+                  {
+                    00:11
+                  }
+                  \cell
+                  {
+                    -0.01
+                  }
+                  \cell
+                  {
+                    112.2
+                  }
+                  \cell
+                  {
+                    112.2
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    2
+                  }
+                  \cell
+                  {
+                    Vacuum I
+                  }
+                  \cell
+                  {
+                    00:13
+                  }
+                  \cell
+                  {
+                    00:35
+                  }
+                  \cell
+                  {
+                    -0.80
+                  }
+                  \cell
+                  {
+                    111.1
+                  }
+                  \cell
+                  {
+                    111.1
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    3
+                  }
+                  \cell
+                  {
+                    Steam Pulse I
+                  }
+                  \cell
+                  {
+                    00:49
+                  }
+                  \cell
+                  {
+                    00:10
+                  }
+                  \cell
+                  {
+                    0.82
+                  }
+                  \cell
+                  {
+                    114.6
+                  }
+                  \cell
+                  {
+                    114.6
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    4
+                  }
+                  \cell
+                  {
+                    Vacuum II
+                  }
+                  \cell
+                  {
+                    01:00
+                  }
+                  \cell
+                  {
+                    00:19
+                  }
+                  \cell
+                  {
+                    -0.78
+                  }
+                  \cell
+                  {
+                    113.4
+                  }
+                  \cell
+                  {
+                    113.4
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    5
+                  }
+                  \cell
+                  {
+                    Steam Pulse II
+                  }
+                  \cell
+                  {
+                    01:20
+                  }
+                  \cell
+                  {
+                    00:12
+                  }
+                  \cell
+                  {
+                    0.78
+                  }
+                  \cell
+                  {
+                    116.1
+                  }
+                  \cell
+                  {
+                    116.1
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    6
+                  }
+                  \cell
+                  {
+                    Vacuum III
+                  }
+                  \cell
+                  {
+                    01:33
+                  }
+                  \cell
+                  {
+                    00:25
+                  }
+                  \cell
+                  {
+                    -0.80
+                  }
+                  \cell
+                  {
+                    114.2
+                  }
+                  \cell
+                  {
+                    114.2
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    7
+                  }
+                  \cell
+                  {
+                    Pressurizing
+                  }
+                  \cell
+                  {
+                    01:59
+                  }
+                  \cell
+                  {
+                    00:30
+                  }
+                  \cell
+                  {
+                    1.11
+                  }
+                  \cell
+                  {
+                    123.1
+                  }
+                  \cell
+                  {
+                    123.1
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    8
+                  }
+                  \cell
+                  {
+                    Sterilizing
+                  }
+                  \cell
+                  \cell
+                  \cell
+                  \cell
+                  \cell
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    9
+                  }
+                  \cell
+                  {
+                    Depressurizing
+                  }
+                  \cell
+                  \cell
+                  \cell
+                  \cell
+                  \cell
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    10
+                  }
+                  \cell
+                  {
+                    Drying
+                  }
+                  \cell
+                  \cell
+                  \cell
+                  \cell
+                  \cell
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    11
+                  }
+                  \cell
+                  {
+                    Equalizing
+                  }
+                  \cell
+                  {
+                    02:30
+                  }
+                  \cell
+                  {
+                    00:29
+                  }
+                  \cell
+                  {
+                    -0.06
+                  }
+                  \cell
+                  {
+                    116.7
+                  }
+                  \cell
+                  {
+                    116.7
+                  }
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                }
+                \row
+                [
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                }
+              }
+            }
+          }
+          \cell
+          {
+            \table
+            [
+              Borders
+              {
+                Width = 0
+              }
+            ]
+            {
+              \columns
+              {
+                \column
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Color = White
+                    }
+                    Alignment = Center
+                  }
+                  Width = "5cm"
+                ]
+              }
+              \rows
+              {
+                \row
+                [
+                  Height = "1.2cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = Red
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    Serialization not Complete
+                  }
+                }
+                \row
+                [
+                  Height = "0.56cm"
+                ]
+                {
+                }
+              }
+            }
+            \table
+            [
+              BottomPadding = 1
+              Borders
+              {
+                Width = 0
+              }
+            ]
+            {
+              \columns
+              {
+                \column
+                [
+                  Format
+                  {
+                    Alignment = Left
+                  }
+                  Width = "3cm"
+                ]
+                \column
+                [
+                  Width = "2cm"
+                ]
+              }
+              \rows
+              {
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Color = RGB(18,138,203)
+                    }
+                  }
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    TEMPERATURA STERYLIZACJI
+                  }
+                  \cell
+                  {
+                    121
+                  }
+                }
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Color = RGB(18,138,203)
+                    }
+                  }
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    Czas
+                  }
+                  \cell
+                  {
+                    -
+                  }
+                }
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Color = RGB(18,138,203)
+                    }
+                  }
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    Temperatura min
+                  }
+                  \cell
+                  {
+                    -
+                  }
+                }
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Color = RGB(18,138,203)
+                    }
+                  }
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    Temperatura max
+                  }
+                  \cell
+                  {
+                    -
+                  }
+                }
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Color = RGB(18,138,203)
+                    }
+                  }
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                  Shading
+                  {
+                    Color = RGB(221,241,252)
+                  }
+                ]
+                {
+                  \cell
+                  {
+                    Ciœnienie min
+                  }
+                  \cell
+                  {
+                    -
+                  }
+                }
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Color = RGB(18,138,203)
+                    }
+                  }
+                  Height = "0.6cm"
+                  VerticalAlignment = Center
+                ]
+                {
+                  \cell
+                  {
+                    Ciœnienie max
+                  }
+                  \cell
+                  {
+                    -
+                  }
+                }
+              }
+            }
+            \table
+            [
+              TopPadding = 3
+              LeftPadding = 3
+              RightPadding = 3
+              BottomPadding = 3
+              Borders
+              {
+                Width = 0
+              }
+            ]
+            {
+              \columns
+              {
+                \column
+                [
+                  Width = "5cm"
+                ]
+              }
+              \rows
+              {
+                \row
+                [
+                  Height = "1.2cm"
+                ]
+                {
+                }
+                \row
+                [
+                  Format
+                  {
+                    Font
+                    {
+                      Size = 8
+                    }
+                    Alignment = Left
+                  }
+                  Height = "1.8cm"
+                  Shading
+                  {
+                    Color = WhiteSmoke
+                  }
+                ]
+                {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    \table
+    [
+      TopPadding = 3
+      LeftPadding = 3
+      RightPadding = 3
+      BottomPadding = 3
+      Borders
+      {
+        Width = 0
+      }
+    ]
+    {
+      \columns
+      {
+        \column
+        [
+          Format
+          {
+            Alignment = Left
+          }
+          Width = "16cm"
+        ]
+      }
+      \rows
+      {
+        \row
+        [
+          Format
+          {
+            Font
+            {
+              Size = 8
+              Color = RGB(18,138,203)
+            }
+          }
+          Height = "1.5cm"
+          Shading
+          {
+            Color = RGB(221,241,252)
+          }
+        ]
+        {
+          \cell
+          {
+            Miejsce pasek do kontroli sterylizacji
+          }
+        }
+      }
+    }
+    \paragraph
+    [
+      Format
+      {
+        Font
+        {
+          Size = 12
+        }
+        Alignment = Center
+        SpaceBefore = "0.3cm"
+      }
+    ]
+    {
+      WYDRUK SPORZ¥DZONO 27-03-2017
+    }
+  }
+}

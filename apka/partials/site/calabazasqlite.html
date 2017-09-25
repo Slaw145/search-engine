@@ -1,0 +1,58 @@
+<br><br>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1">
+<a href="#/products">przejdź do sql</a>
+</div>
+
+<div class="col-lg-10 col-sm-10 col-sm-10 col-xs-10">
+<br><br><br><br>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Maszyna</strong>
+</div>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Data</strong>
+</div>
+<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+<strong>Numer procesu</strong>
+</div>
+<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+<strong>Typ procesu</strong>
+</div>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Numer erroru</strong>
+</div>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Status procesu</strong>
+</div>
+<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+<strong>Notatki</strong>
+</div>
+<br><br>
+	  <div class="panel" ng-repeat="danes in sqlite | filter : search1">
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{danes.machine}}
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{danes.date}}
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+						{{danes.processId}}
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+						{{danes.processType}}
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{danes.processStatus}}
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{danes.errorId}}
+					</div>
+					<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+						{{danes.note}}
+					</div>
+		</div>
+		
+</div>
+	
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1">
+	<a href="#/sqlite">wróć do sqlite</a>
+</div>

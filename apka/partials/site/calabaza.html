@@ -1,0 +1,37 @@
+<br><br>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1">
+<a href="#/products">wróć do sql</a>
+</div>
+
+
+<div class="col-lg-10 col-sm-10 col-sm-10 col-xs-10">
+<br><br><br><br>
+<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+<strong>Maszyna</strong>
+</div>
+<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+<strong>Data</strong>
+</div>
+<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+<strong>Pliki</strong>
+</div>
+<br><br>
+	  <div class="panel" style="width:100%;" ng-repeat="product in products | filter : search1">
+	  
+					<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+						{{product.maszyna}}
+					</div>
+					<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+						{{product.daty}}
+					</div>
+					<div class="col-lg-4 col-sm-4 col-sm-4 col-xs-4" style="float:left;">
+						<a download="process.dat"  href="../wszystkiedane/{{product.maszyna}}/{{product.daty}}/{{product.pliki}}" target="_blank">{{product.pliki}}</a>
+					</div>
+
+		</div>
+		
+</div>
+	
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1">
+	<a href="#/sqlite">Przejdź do sqlite</a>
+</div>

@@ -1,0 +1,120 @@
+﻿<img src="enbio.jpg" alt="" style="width:25%; float:right; padding-top: 0.7%; padding-right: 3%;" class=" img-rounded">
+
+<br><br>
+
+<a href="#/products" style="padding-left: 1%;">wróć do sql</a>
+<br><br>
+<a href="#/bazasqlite" style="padding-left: 1%;">Wyświetl całą bazę danych sqlite</a>
+<br>
+<div class="content">
+<br>
+  <div class="row">
+
+	<div class="col-lg-12 col-sm-12 col-sm-12 col-xs-12">
+			<form ng-submit="formwszystkiewyn( liczwszywyniki )">
+				<div class="row">
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2">
+
+							<input type="text" class="form-control" ng-model="liczwszywyniki.maszyna" placeholder="Podaj maszynę">
+							
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2">
+
+							<input type="text" class="form-control" ng-model="liczwszywyniki.dataod" placeholder="Podaj datę od ">
+							<br><br>
+							<input type="text" class="form-control" ng-model="liczwszywyniki.datado" placeholder="Podaj datę do ">
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2">
+
+							<input type="text" class="form-control" ng-model="liczwszywyniki.procod" placeholder="Nr processu od">
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2">
+
+							<input type="text" class="form-control" ng-model="liczwszywyniki.procdo" placeholder="Nr processu do">
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1">
+							Typ procesu<select name="procestype" ng-model="liczwszywyniki.procestype">
+							<option></option>
+							<option>134</option>
+							<option>121</option>
+							<option>Test HELIX</option>
+							<option>Test Vacuum</option>
+							</select>
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1">
+							Status procesu<select name="procesStatus" ng-model="liczwszywyniki.procesStatus" style="margin-left: 15px;">
+							<option></option>
+							<option>0</option>
+							<option>1</option>
+							</select>
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2">
+
+							<input type="text" class="form-control" ng-model="liczwszywyniki.errorId" placeholder="Numer erroru">
+					</div>
+					<br><br>
+					
+				</div>
+				<br>
+				<button class="btn btn-primary" style="margin-left:45%;">Wyświetl wyniki</button>
+				  
+			</form>
+		</div>
+		
+  </div>
+</div>
+<br><br>
+<div class="col-lg-12 col-sm-12 col-sm-12 col-xs-12">
+<br><br>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Maszyna</strong>
+</div>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Data</strong>
+</div>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Numer procesu</strong>
+</div>
+<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+<strong>Typ procesu</strong>
+</div>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Numer erroru</strong>
+</div>
+<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+<strong>Plik</strong>
+</div>
+<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+<strong>Status procesu</strong>
+</div>
+<div class="col-lg-3 col-sm-3 col-sm-3 col-xs-3" style="float:left;">
+<strong>Notatki</strong>
+</div>
+<br><br>
+       <div class="panel" style="width:100%;" ng-repeat="seachsa in szukajsqlite">
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{seachsa.machine}}
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{seachsa.date}}
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{seachsa.processId}}
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+						{{seachsa.processType}}
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{seachsa.processStatus}}
+					</div>
+					<div class="col-lg-2 col-sm-2 col-sm-2 col-xs-2" style="float:left;">
+					 <a download="process.dat" href="../wszystkiedane/{{seachsa.machine}}/{{seachsa.date}}/{{seachsa.pliki}}" target="_blank">{{seachsa.pliki}}</a>
+					</div>
+					<div class="col-lg-1 col-sm-1 col-sm-1 col-xs-1" style="float:left;">
+						{{seachsa.errorId}}
+					</div>
+					<div class="col-lg-3 col-sm-3 col-sm-3 col-xs-3" style="float:left;">
+						{{seachsa.note}}
+					</div>
+	   </div>
+</div>
